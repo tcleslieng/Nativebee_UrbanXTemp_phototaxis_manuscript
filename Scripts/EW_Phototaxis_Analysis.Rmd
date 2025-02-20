@@ -1,0 +1,210 @@
+---
+title: "Bee_Analysis_wNAs"
+output: html_document
+date: "2024-10-01"
+output:
+  html_document:
+   toc: yes
+   toc_float: yes
+   collapsed: true 
+   smooth_scroll: true
+   depth: 2 
+   highlight: tango 
+   theme: flatly
+   code_folding: none
+self_contained: yes
+mode: selfcontained
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#**Install Packages**
+```{r}
+install.packages("lme4") # linear mixed effect models
+install.packages("ggplot2") # plot graphs
+install.packages("tidyverse") # QOL features
+install.packages("wesanderson") # color palette
+install.packages("dplyr")  # data manipulation
+install.packages("BFpack") # Bayes Factor for logistic regression
+install.packages("ggThemeAssist") # Add-in to customize ggplot2 themes
+install.packages("performance") # For assumption checking
+install.packages("DHARMa") # For assumption checking
+install.packages("MuMIn")
+install.packages("patchwork")
+install.packages("lmerTest")
+```
+
+# **Load Packages**
+```{r, message=FALSE, warning=FALSE}
+library(lme4) # linear mixed effect models
+library(ggplot2) # plot graphs
+library(tidyverse) # QOL features
+library(wesanderson) # color palette
+library(dplyr)  # data manipulation
+library(BFpack) # Bayes Factor for logistic regression
+library(ggThemeAssist) # you may need to restart you session for this add-in to appear
+library(performance) # For assumption checking
+library(DHARMa) # For assumption checking
+library(MuMIn)
+library(tidyr)
+library(patchwork)
+library(lmerTest)
+library(readr)
+
+options(contrasts = c("contr.sum", "contr.poly"))
+```
+
+#**Load Data**
+```{r}
+beesNA <- read.csv("bees_wNA.csv", header=TRUE)
+  na="NA"
+view(beesNA)
+summary(beesNA) #view summary
+str(beesNA) #display structure
+```
+#**Wrangle Data**
+```{r}
+beesNA$individual <- as.factor(beesNA$individual)
+beesNA$type <- as.factor(beesNA$type)
+beesNA$species <- as.factor(beesNA$species)
+beesNA$urban_gradient <- as.factor(beesNA$urban_gradient)
+beesNA$temperature <- as.factor(beesNA$temperature)
+beesNA$light <- as.factor(beesNA$light)
+beesNA$condition <- as.factor(beesNA$condition)
+beesNA$condition_sequence <- as.factor(beesNA$condition_sequence)
+str(beesNA)
+```
+#**Check Levels**
+```{r}
+levels(beesNA$type)
+levels(beesNA$urban_gradient)
+levels(beesNA$temperature)
+levels(beesNA$species)
+levels(beesNA$light)
+levels(beesNA$condition)
+```
+# **Visualise Shape**
+```{r}
+ggplot(data = beesNA, aes(x = condition, y = duration_from_start, colour = type)) +
+  geom_boxplot() +
+  labs(x = "Light", y = "Time to Complete (s)") +
+  theme_classic() +
+  theme(plot.title = element_text(size = 11))    
+```
+#**Modelling**
+```{r}
+
+beesNA_m1 <- lmer(duration_from_start~ urban_gradient*temperature*light + condition_sequence + type +  (1|individual), data = beesNA)
+
+```
+
+#**Dredge**
+```{r}
+
+options(na.action = na.fail)
+glmdredge <- dredge(beesNA_m1)
+glmdredge
+
+```
+
+#**Remodeling**
+```{r}
+
+beesNA_m2 <- lmer(duration_from_start~ light + temperature + urban_gradient + type + light*urban_gradient + light*temperature +  (1|individual), data = beesNA)
+
+summary(beesNA_m2)
+
+```
+
+#**Check Assumptions**
+```{r}
+acf(residuals(beesNA_m2)) # check for independence of residuals - there should be no increasing or decreasing pattern and should look noisy
+
+qqnorm(residuals(beesNA_m2))
+qqline(residuals(beesNA_m2))  # Normality of residuals
+
+
+plot(fitted(beesNA_m2), residuals(beesNA_m2))   # Homoscedasticity assumption, there should be no fanning pattern
+
+simulated_residuals <- simulateResiduals(fittedModel = beesNA_m2) # additional test from DHARMA
+plot(simulated_residuals)
+```
+
+#**Transform Data**
+```{r}
+beesNA$transformed_duration <- log(beesNA$duration_from_start)
+
+beesNA_m2 <- lmer(transformed_duration~ light + temperature + urban_gradient + type + light*urban_gradient + light*temperature + temperature*urban_gradient + (1|individual), data = beesNA)
+
+summary(beesNA_m2)
+```
+
+#**Check Assumptions**
+```{r}
+acf(residuals(beesNA_m2)) # check for independence of residuals - there should be no increasing or decreasing pattern and should look noisy
+
+qqnorm(residuals(beesNA_m2))
+qqline(residuals(beesNA_m2))  # Normality of residuals
+
+
+plot(fitted(beesNA_m2), residuals(beesNA_m2))   # Homoscedasticity assumption, there should be no fanning pattern
+
+simulated_residuals <- simulateResiduals(fittedModel = beesNA_m2) # additional test from DHARMA
+plot(simulated_residuals)
+```
+
+#**Visualise by Group**
+```{r}
+summary_bees <- beesNA %>%
+  group_by(condition, type) %>%
+  mutate(mean=mean(transformed_duration), 
+         individual=as.factor(individual),
+         n=n(), 
+         se=sd(transformed_duration)/sqrt(n))
+# Plot
+ggplot(summary_bees, aes(x = condition, y = transformed_duration)) +
+  geom_col(aes(y = mean, fill = type), size = 4, position = position_dodge(0.9)) +
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, group = type), 
+                position = position_dodge(0.9), width = 0.15, colour= "black") +  # Adjust width for clearer error bars
+   geom_jitter(aes(colour = individual, group = type), 
+              position = position_jitterdodge(jitter.width = 0.15, dodge.width = 0.9), 
+              show.legend = FALSE) + 
+  scale_colour_manual(values = wes_palette("Darjeeling1", length(unique(summary_bees$individual)), type = "continuous")) +  # Apply wesanderson palette
+  scale_fill_manual(values = c("Honeybees" = "#D9A94D",  # Burnt Sienna
+                               "Native" = "#A1B5D8")) +    # Adjust colors for bars
+  labs(x = "Condition (ºC / light)", y = "Mean log(Duration from Start) (s)", fill = "Species") +
+  theme(legend.position = "right") +
+  theme_minimal(base_family = "") +
+  theme(
+    plot.background = element_rect(fill = "white"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    axis.line = element_line(color = "black"),
+    axis.text = element_text(size = 12),  # Adjust font size for axis labels
+    axis.title = element_text(size = 12),  # Adjust font size for axis titles
+    legend.text = element_text(size = 12),  # Adjust font size for legend text
+    legend.title = element_text(size = 12)  # Adjust font size for legend title
+  ) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 5))
+```
+
+#**Means**
+```{r}
+
+mean_duration <- beesNA %>%
+  group_by(type, temperature) %>%
+  summarise(mean = mean(duration_from_start, na.rm = TRUE))
+print(mean_duration)
+```
+
+
+```{r}
+R.version
+citation()
+```
+
+
