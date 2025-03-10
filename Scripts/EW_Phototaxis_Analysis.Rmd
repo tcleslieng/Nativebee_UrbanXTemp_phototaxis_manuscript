@@ -60,8 +60,7 @@ options(contrasts = c("contr.sum", "contr.poly"))
 
 #**Load Data**
 ```{r}
-beesNA <- read.csv("bees_wNA.csv", header=TRUE)
-  na="NA"
+beesNA <- read.csv("../Data/bees_wNA.csv", header = TRUE, na.strings = "NA")
 view(beesNA)
 summary(beesNA) #view summary
 str(beesNA) #display structure
@@ -75,6 +74,7 @@ beesNA$urban_gradient <- as.factor(beesNA$urban_gradient)
 beesNA$temperature <- as.factor(beesNA$temperature)
 beesNA$light <- as.factor(beesNA$light)
 beesNA$condition <- as.factor(beesNA$condition)
+beesNA$condition2 <- as.factor(beesNA$condition2)
 beesNA$condition_sequence <- as.factor(beesNA$condition_sequence)
 str(beesNA)
 ```
@@ -86,6 +86,7 @@ levels(beesNA$temperature)
 levels(beesNA$species)
 levels(beesNA$light)
 levels(beesNA$condition)
+levels(beesNA$condition2)
 ```
 # **Visualise Shape**
 ```{r}
@@ -160,25 +161,30 @@ plot(simulated_residuals)
 #**Visualise by Group**
 ```{r}
 summary_bees <- beesNA %>%
-  group_by(condition, type) %>%
+  group_by(condition2, type) %>%
   mutate(mean=mean(transformed_duration), 
          individual=as.factor(individual),
          n=n(), 
          se=sd(transformed_duration)/sqrt(n))
+
+summary_bees <- summary_bees %>%
+  mutate(transformed_duration = ifelse(transformed_duration < 0, 0.01, transformed_duration))
+
 # Plot
-ggplot(summary_bees, aes(x = condition, y = transformed_duration)) +
+fig3<-ggplot(summary_bees, aes(x = condition2, y = transformed_duration)) +
   geom_col(aes(y = mean, fill = type), size = 4, position = position_dodge(0.9)) +
-  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, group = type), 
-                position = position_dodge(0.9), width = 0.15, colour= "black") +  # Adjust width for clearer error bars
    geom_jitter(aes(colour = individual, group = type), 
               position = position_jitterdodge(jitter.width = 0.15, dodge.width = 0.9), 
-              show.legend = FALSE) + 
-  scale_colour_manual(values = wes_palette("Darjeeling1", length(unique(summary_bees$individual)), type = "continuous")) +  # Apply wesanderson palette
+              show.legend = FALSE, size = 0.7) + 
+  geom_errorbar(aes(ymin = mean - se, ymax = mean + se, group = type), 
+                position = position_dodge(0.9), width = 0.15, colour= "black") +  # Adjust width for clearer error bars
+  scale_colour_manual(values = wes_palette("Darjeeling1", length(unique(summary_bees$individual)), type = "continuous")) +
   scale_fill_manual(values = c("Honeybees" = "#D9A94D",  # Burnt Sienna
                                "Native" = "#A1B5D8")) +    # Adjust colors for bars
-  labs(x = "Condition (ºC / light)", y = "Mean log(Duration from Start) (s)", fill = "Species") +
+  labs(x = "Condition (ºC / Light / Urban Gradient)", y = "Mean log (duration in seconds from start)", fill = "Species") +
   theme(legend.position = "right") +
   theme_minimal(base_family = "") +
+  guides(fill = guide_legend(title = "Taxa")) +
   theme(
     plot.background = element_rect(fill = "white"),
     panel.grid.major = element_blank(),
@@ -187,9 +193,18 @@ ggplot(summary_bees, aes(x = condition, y = transformed_duration)) +
     axis.text = element_text(size = 12),  # Adjust font size for axis labels
     axis.title = element_text(size = 12),  # Adjust font size for axis titles
     legend.text = element_text(size = 12),  # Adjust font size for legend text
-    legend.title = element_text(size = 12)  # Adjust font size for legend title
+    legend.title = element_text(size = 12),
+    plot.margin = margin(0.8,0.8,0.8,0.8, "cm"),
+    axis.title.x = element_text(vjust = -4),
+    axis.title.y = element_text(vjust = 6),
+    axis.text.x = element_text(angle = 45, hjust = 1)# Adjust font size for legend title
   ) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, 5))
+
+print(fig3)
+ggsave(fig3, width = 8, height = 6, dpi = 300, filename = "../Output/fig3.pdf")
+ggsave(fig3, width = 8, height = 6, dpi = 300, filename = "../Output/fig3.png")
+
 ```
 
 #**Means**

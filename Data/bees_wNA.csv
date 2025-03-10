@@ -1,0 +1,309 @@
+individual,observation_date,type,species,urban_gradient,temperature,light,condition,condition_sequence,light_2,start_line,finish_line,duration_from_light,duration_from_start,condition2
+1,7/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,14.567,32.433,50.767,36.166,18.334,32 / UV / Urban
+1,7/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,1,20.733,26.567,40.767,20.067,14.2,32 / white / Urban
+1,7/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,12.3,12.733,16.367,4.1,3.634,28 / UV / Urban
+1,7/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,24.8,42.167,49.8,25.033,7.633,28 / white / Urban
+2,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,UV,32 / UV,4,6.3,12.633,18.367,12.1,5.734,32 / UV / Urban
+2,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,white,32 / white,3,5.9,51.733,68.533,62.6,16.8,32 / white / Urban
+2,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,UV,28 / UV,2,24.133,26.767,33.067,8.967,6.3,28 / UV / Urban
+2,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,white,28 / white,1,15.167,16,80.533,65.4,64.533,28 / white / Urban
+3,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,UV,32 / UV,4,12.233,,,,120,32 / UV / Urban
+3,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,white,32 / white,3,16.133,,,,120,32 / white / Urban
+3,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,UV,28 / UV,1,15.267,52.533,70.567,55.3,18.034,28 / UV / Urban
+3,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,white,28 / white,2,19.233,21.667,64,44.867,42.333,28 / white / Urban
+4,7/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,17.733,18.1,19.2,1.467,1.1,32 / UV / Urban
+4,7/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,24.4,27.767,31.633,7.233,3.866,32 / white / Urban
+4,7/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,16.533,20,21.2,4.667,1.2,28 / UV / Urban
+4,7/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,26.467,29.033,30.667,4.2,1.634,28 / white / Urban
+5,7/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,22.867,27.5,30.467,2.967,7.633,32 / UV / Urban
+5,7/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,24.003,24.533,,,120,32 / white / Urban
+5,7/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,11.733,12,14.633,2.633,2.9,28 / UV / Urban
+5,7/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,9.3,12.933,14.4,1.467,5.1,28 / white / Urban
+6,7/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,11.5,12.533,13.8,2.367,1.267,32 / UV / Urban
+6,7/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,7.35,,,120,120,32 / white / Urban
+6,7/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,11,11.467,14.267,3.267,2.8,28 / UV / Urban
+6,7/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,16.867,17.133,18.9,2.033,1.767,28 / white / Urban
+7,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,UV,32 / UV,4,8.32,12.12,20.7,12.38,8.58,32 / UV / Urban
+7,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,white,32 / white,3,16,16.9,24.2,8.233,7.3,32 / white / Urban
+7,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,UV,28 / UV,2,18.6,41.633,55.333,36.8,13.7,28 / UV / Urban
+7,7/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,white,28 / white,1,10.867,18.6,67.267,56.433,48.667,28 / white / Urban
+8,8/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,46.9,58.133,67.167,9.034,20.233,32 / UV / Urban
+8,8/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,71.1,75.833,78.833,3,7.767,32 / white / Urban
+8,8/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,8.5,10.633,12.4,1.767,3.9,28 / UV / Urban
+8,8/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,15.3,16.067,27.633,11.566,12.333,28 / white / Urban
+9,8/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,19.567,20.133,32.067,11.934,12.533,32 / UV / Urban
+9,8/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,13.233,28,38.7,10.7,25.434,32 / white / Urban
+9,8/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,11.967,16.467,23.567,7.1,11.566,28 / UV / Urban
+9,8/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,15.067,15.967,18.467,2.5,3.433,28 / white / Urban
+11,8/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,UV,32 / UV,4,16.033,22.433,102.26,86.227,79.827,32 / UV / Urban
+11,8/05/2024,Native,Lasioglossum (Chilalictus),Urban,32,white,32 / white,3,36.6,41.267,53.867,17.3,12.6,32 / white / Urban
+11,8/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,UV,28 / UV,2,11.267,17.233,28.933,17.666,11.7,28 / UV / Urban
+11,8/05/2024,Native,Lasioglossum (Chilalictus),Urban,28,white,28 / white,1,9.333,15.867,23.567,14.267,7.7,28 / white / Urban
+13,8/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,7.367,37.233,123,115.633,85.767,32 / UV / Urban
+13,8/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,18.133,23.367,48.033,29.867,24.666,32 / white / Urban
+13,8/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,16.733,20.267,20.367,3.534,0.1,28 / UV / Urban
+13,8/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,20.733,22.033,24.167,3.467,2.134,28 / white / Urban
+14,8/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,15.667,17.9,39.733,24.066,21.833,32 / UV / Urban
+14,8/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,13.633,35.5,46.933,33.3,11.433,32 / white / Urban
+14,8/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,7.2,7.767,9.567,2.367,1.8,28 / UV / Urban
+14,8/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,16.333,16.967,18.4,2.034,1.433,28 / white / Urban
+15,9/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,13.7,15.233,25.533,11.9,10.3,32 / UV / Urban
+15,9/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,24.8,26.1,31.933,7.167,5.833,32 / white / Urban
+15,9/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,30.833,38.533,53.3,22.434,14.767,28 / UV / Urban
+15,9/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,10.733,32.3,62,51.267,29.7,28 / white / Urban
+16,9/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,34.667,38.133,48.867,14.166,10.734,32 / UV / Urban
+16,9/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,26.3,30.933,39.333,13.1,8.4,32 / white / Urban
+16,9/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,12.7,13.367,14.333,1.633,0.966,28 / UV / Urban
+16,9/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,28.933,30.733,37.2,8.234,6.467,28 / white / Urban
+18,9/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,23.133,38.7,43.933,20.734,5.233,32 / UV / Urban
+18,9/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,10.667,13.933,18.233,7.6,4.3,32 / white / Urban
+18,9/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,13.467,,,,120,28 / UV / Urban
+18,9/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,13.933,19.1,23.433,9.5,4.333,28 / white / Urban
+20,9/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,12.067,14.533,27.533,15.433,13,32 / UV / Urban
+20,9/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,15.6,16.633,27.333,11.733,10.7,32 / white / Urban
+20,9/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,8.8,9.4,16.533,7.767,7.133,28 / UV / Urban
+20,9/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,10.4,20.9,30.667,20.167,9.767,28 / white / Urban
+21,9/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,25.9,32.067,36.133,10.3,4.066,32 / UV / Urban
+21,9/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,10.3,15.833,19.733,9.5,3.9,32 / white / Urban
+21,9/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,23.3,52.267,58.4,35.1,6.133,28 / UV / Urban
+21,9/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,11.167,13.233,16.833,5.8,3.6,28 / white / Urban
+22,9/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,20.633,23.433,26.9,6.234,3.467,32 / UV / Urban
+22,9/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,13.933,15.067,18.333,4.367,3.266,32 / white / Urban
+22,9/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,16.467,22.333,25.4,8.933,3.067,28 / UV / Urban
+22,9/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,36.2,38.167,45.133,8.967,6.966,28 / white / Urban
+23,13/05/2024,Native,Leioproctus,Natural,32,UV,32 / UV,3,24.433,39.967,49.3,24.967,9.333,32 / UV / Natural
+23,13/05/2024,Native,Leioproctus,Natural,32,white,32 / white,4,5.8,20.533,,,120,32 / white / Natural
+23,13/05/2024,Native,Leioproctus,Natural,28,UV,28 / UV,1,4.6,8.5,23.033,18.4,14.533,28 / UV / Natural
+23,13/05/2024,Native,Leioproctus,Natural,28,white,28 / white,2,3,,,,120,28 / white / Natural
+24,13/05/2024,Native,Leioproctus,Natural,32,UV,32 / UV,3,12.033,17.233,31.833,19.834,14.6,32 / UV / Natural
+24,13/05/2024,Native,Leioproctus,Natural,32,white,32 / white,4,7.933,37.567,46.067,38.167,8.5,32 / white / Natural
+24,13/05/2024,Native,Leioproctus,Natural,28,UV,28 / UV,2,4.567,31.633,39.767,35.166,8.134,28 / UV / Natural
+24,13/05/2024,Native,Leioproctus,Natural,28,white,28 / white,1,4.633,19.067,29.167,24.534,10.1,28 / white / Natural
+25,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,UV,32 / UV,4,4.433,13.133,15.533,11.1,2.4,32 / UV / Natural
+25,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,white,32 / white,3,9.167,56.7,62.067,53,5.367,32 / white / Natural
+25,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,UV,28 / UV,2,3.167,10.867,14.4,11.233,3.533,28 / UV / Natural
+25,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,white,28 / white,1,21.133,30.033,43.867,22.667,13.834,28 / white / Natural
+26,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,UV,32 / UV,1,17.067,21.1,29.433,12.366,8.333,32 / UV / Natural
+26,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,white,32 / white,2,8.067,12.467,17.2,9.166,4.733,32 / white / Natural
+26,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,UV,28 / UV,3,4.367,5.8,10.467,6.066,4.667,28 / UV / Natural
+26,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,white,28 / white,4,4.767,57.3,67.133,62.366,9.833,28 / white / Natural
+27,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,UV,32 / UV,1,17.233,,,,120,32 / UV / Natural
+27,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,white,32 / white,2,8.433,10.833,15.333,6.834,4.5,32 / white / Natural
+27,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,UV,28 / UV,3,6.267,27.533,40.033,33.9,12.5,28 / UV / Natural
+27,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,white,28 / white,4,5.067,41.467,45.733,40.6,4.266,28 / white / Natural
+28,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,UV,32 / UV,2,7.8,8.3,47.467,39.667,39.167,32 / UV / Natural
+28,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,white,32 / white,1,11.867,13.567,20.933,9.033,7.366,32 / white / Natural
+28,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,UV,28 / UV,3,8.333,14.967,29.467,21.134,14.5,28 / UV / Natural
+28,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,white,28 / white,4,4.367,6.767,21.9,17.566,15.133,28 / white / Natural
+29,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,UV,32 / UV,1,25.5,37.6,76.567,51.033,38.967,32 / UV / Natural
+29,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,white,32 / white,2,2.9,4.033,20.1,17.167,16.067,32 / white / Natural
+29,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,UV,28 / UV,4,5,7.5,12.267,7.267,4.767,28 / UV / Natural
+29,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,white,28 / white,3,3.933,5.167,14.1,10.167,8.933,28 / white / Natural
+31,13/05/2024,Native,Exoneura,Natural,32,UV,32 / UV,1,10.2,17.7,68.433,58.167,50.733,32 / UV / Natural
+31,13/05/2024,Native,Exoneura,Natural,32,white,32 / white,2,5.9,6.433,15.1,9.233,8.667,32 / white / Natural
+31,13/05/2024,Native,Exoneura,Natural,28,UV,28 / UV,4,8.3,,,,120,28 / UV / Natural
+31,13/05/2024,Native,Exoneura,Natural,28,white,28 / white,3,6.967,46.033,53.233,46.233,7.2,28 / white / Natural
+32,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,UV,32 / UV,2,6.533,10.333,16.667,10.134,6.334,32 / UV / Natural
+32,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,32,white,32 / white,1,3.8,8.267,16.967,13.167,8.7,32 / white / Natural
+32,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,UV,28 / UV,3,3.767,4.7,15.5,11.766,10.8,28 / UV / Natural
+32,13/05/2024,Native,Lasioglossum (Parasphecodes),Natural,28,white,28 / white,4,3.633,6.067,11,7.4,4.933,28 / white / Natural
+33,13/05/2024,Native,Lasioglossum (Homalictus),Natural,32,UV,32 / UV,2,4.267,6.7,13.9,9.666,7.2,32 / UV / Natural
+33,13/05/2024,Native,Lasioglossum (Homalictus),Natural,32,white,32 / white,1,4.233,12.533,26.467,22.267,13.934,32 / white / Natural
+33,13/05/2024,Native,Lasioglossum (Homalictus),Natural,28,UV,28 / UV,4,7.733,19.7,42.033,34.3,22.333,28 / UV / Natural
+33,13/05/2024,Native,Lasioglossum (Homalictus),Natural,28,white,28 / white,3,5.7,22.367,56.467,50.733,34.1,28 / white / Natural
+34,13/05/2024,Native,Leioproctus,Natural,32,UV,32 / UV,2,11.9,21.433,29.8,17.933,8.367,32 / UV / Natural
+34,13/05/2024,Native,Leioproctus,Natural,32,white,32 / white,1,4.133,7.833,15.367,11.267,7.534,32 / white / Natural
+34,13/05/2024,Native,Leioproctus,Natural,28,UV,28 / UV,4,5.633,8.3,27.333,21.667,19.033,28 / UV / Natural
+34,13/05/2024,Native,Leioproctus,Natural,28,white,28 / white,3,4,9.167,18.867,14.833,9.7,28 / white / Natural
+35,13/05/2024,Native,Leioproctus,Natural,32,UV,32 / UV,1,6.967,8.433,94.575,87.608,86.142,32 / UV / Natural
+35,13/05/2024,Native,Leioproctus,Natural,32,white,32 / white,2,12.467,20.767,26.3,13.8,5.533,32 / white / Natural
+35,13/05/2024,Native,Leioproctus,Natural,28,UV,28 / UV,4,9.267,,,,120,28 / UV / Natural
+35,13/05/2024,Native,Leioproctus,Natural,28,white,28 / white,3,7.9,47.833,56.367,48.433,8.534,28 / white / Natural
+36,13/05/2024,Native,Exoneura,Natural,32,UV,32 / UV,2,17.3,18.467,27.3,10.033,8.833,32 / UV / Natural
+36,13/05/2024,Native,Exoneura,Natural,32,white,32 / white,1,5.233,,,,120,32 / white / Natural
+36,13/05/2024,Native,Exoneura,Natural,28,UV,28 / UV,3,2.9,4.2,10.033,7.133,5.833,28 / UV / Natural
+36,13/05/2024,Native,Exoneura,Natural,28,white,28 / white,4,6.733,13.833,58.867,52.134,45.034,28 / white / Natural
+37,13/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,UV,32 / UV,1,3.3,4.467,8.4,5.133,3.933,32 / UV / Natural
+37,13/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,white,32 / white,2,4.567,21.867,43.067,38.5,21.2,32 / white / Natural
+37,13/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,UV,28 / UV,3,4.133,21.733,38.4,34.234,16.667,28 / UV / Natural
+37,13/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,white,28 / white,4,8.1,8.933,80.567,72.4,71.634,28 / white / Natural
+38,13/05/2024,Native,Leioproctus,Natural,32,UV,32 / UV,2,3.033,4.6,8.333,5.3,3.733,32 / UV / Natural
+38,13/05/2024,Native,Leioproctus,Natural,32,white,32 / white,1,5.3,7.233,14.233,8.9,7,32 / white / Natural
+38,13/05/2024,Native,Leioproctus,Natural,28,UV,28 / UV,4,20.433,53.8,70.967,50.567,17.167,28 / UV / Natural
+38,13/05/2024,Native,Leioproctus,Natural,28,white,28 / white,3,12.767,30.733,38.633,25.866,7.9,28 / white / Natural
+39,14/05/2024,Native,Lasioglossum (Homalictus),Natural,32,UV,32 / UV,2,21.333,32.333,38.567,17.267,6.234,32 / UV / Natural
+39,14/05/2024,Native,Lasioglossum (Homalictus),Natural,32,white,32 / white,1,13.167,33.2,75.9,62.766,42.7,32 / white / Natural
+39,14/05/2024,Native,Lasioglossum (Homalictus),Natural,28,UV,28 / UV,3,15.3,16.167,41.333,26.033,25.166,28 / UV / Natural
+39,14/05/2024,Native,Lasioglossum (Homalictus),Natural,28,white,28 / white,4,13.1,33.067,83.933,70.833,50.866,28 / white / Natural
+40,15/05/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,2,14.767,21.9,34.833,12.933,20.033,32 / UV / Natural
+40,15/05/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,1,13.133,19.533,25.733,6.2,12.6,32 / white / Natural
+40,15/05/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,3,6.067,7.867,13.433,5.566,7.366,28 / UV / Natural
+40,15/05/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,4,18.067,20.767,26.2,5.433,8.1,28 / white / Natural
+41,15/05/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,1,11.067,15.6,25.667,10.067,14.533,32 / UV / Natural
+41,15/05/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,2,14.233,16.967,26.1,9.133,12,32 / white / Natural
+41,15/05/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,4,13.633,14.067,48.067,34,34.5,28 / UV / Natural
+41,15/05/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,3,6.433,7.567,11.533,3.966,5.134,28 / white / Natural
+42,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,UV,32 / UV,2,9.4,18.833,33.567,14.734,24.133,32 / UV / Natural
+42,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,white,32 / white,1,21.667,,,,120,32 / white / Natural
+42,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,UV,28 / UV,3,5.567,49.567,62.633,13.066,57.033,28 / UV / Natural
+42,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,white,28 / white,4,14.3,72.567,96,23.433,81.767,28 / white / Natural
+43,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,UV,32 / UV,2,11.533,,,,120,32 / UV / Natural
+43,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,white,32 / white,1,12.467,,,,120,32 / white / Natural
+43,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,UV,28 / UV,3,5.433,7.667,18.533,10.866,13.034,28 / UV / Natural
+43,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,white,28 / white,4,13.467,,,,120,28 / white / Natural
+44,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,UV,32 / UV,2,10.367,23.033,24.033,1,13.733,32 / UV / Natural
+44,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,white,32 / white,1,14.467,52.167,88.267,36.1,73.8,32 / white / Natural
+44,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,UV,28 / UV,4,10.167,22.5,23.933,1.433,13.733,28 / UV / Natural
+44,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,white,28 / white,3,5.433,16.4,23.867,7.467,18.434,28 / white / Natural
+45,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,UV,32 / UV,1,14.533,18.6,24.533,5.933,9.967,32 / UV / Natural
+45,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,32,white,32 / white,2,15.633,16.1,28.733,12.633,13.067,32 / white / Natural
+45,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,UV,28 / UV,4,12.267,12.333,24.967,12.634,12.7,28 / UV / Natural
+45,15/05/2024,Native,Lasioglossum (Chilalictus),Natural,28,white,28 / white,3,8.767,11.433,36.267,24.834,27.533,28 / white / Natural
+46,15/05/2024,Native,Lasioglossum (Homalictus),Natural,32,UV,32 / UV,2,28.467,40.167,55.933,15.766,27.466,32 / UV / Natural
+46,15/05/2024,Native,Lasioglossum (Homalictus),Natural,32,white,32 / white,1,12.4,18.2,26.1,7.9,13.733,32 / white / Natural
+46,15/05/2024,Native,Lasioglossum (Homalictus),Natural,28,UV,28 / UV,4,11.467,22.533,32.3,9.767,20.9,28 / UV / Natural
+46,16/05/2024,Native,Lasioglossum (Homalictus),Natural,28,white,28 / white,3,14.433,15.567,24.033,8.466,9.6,28 / white / Natural
+47,16/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,1,12.867,16.6,37.333,20.733,24.4,32 / UV / Urban
+47,16/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,2,19.967,26.333,47.167,20.834,27.2,32 / white / Urban
+47,16/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,4,53.667,54.733,66.7,11.967,13.033,28 / UV / Urban
+47,16/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,3,23.733,25.967,46.867,20.9,23.134,28 / white / Urban
+48,16/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,1,34.967,36.3,43.867,7.567,8.9,32 / UV / Urban
+48,16/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,2,37.1,41.267,56.1,14.833,19.033,32 / white / Urban
+48,16/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,3,13.9,18.3,30.567,12.267,16.667,28 / UV / Urban
+48,16/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,4,24.433,30.733,47.2,16.467,22.734,28 / white / Urban
+49,16/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,1,38.367,46.433,52.967,6.534,14.633,32 / UV / Urban
+49,16/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,2,13.7,16.467,22.267,5.8,8.567,32 / white / Urban
+49,16/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,4,11.333,89.267,111.733,22.466,100.3,28 / UV / Urban
+49,16/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,3,32.633,36.733,47.6,10.867,14.967,28 / white / Urban
+50,16/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,1,11.567,30.233,66.833,36.6,55.333,32 / UV / Urban
+50,16/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,2,11.567,70.933,,,120,32 / white / Urban
+50,16/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,4,12.233,13.533,16.233,2.7,4,28 / UV / Urban
+50,16/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,3,13.933,14.067,14.233,0.166,0.267,28 / white / Urban
+51,16/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,16,42.1,62.167,20.067,46.233,32 / UV / Urban
+51,16/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,20.433,21.4,28.167,6.767,7.767,32 / white / Urban
+51,16/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,18.267,21.3,33.667,12.367,15.333,28 / UV / Urban
+51,16/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,45.267,48.133,85.167,37.034,39.9,28 / white / Urban
+53,27/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,8.067,10.933,18.967,8.034,10.933,32 / UV / Urban
+53,27/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,5.833,6.133,7.3,1.167,1.467,32 / white / Urban
+53,27/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,6.8,12.033,16.467,4.434,9.633,28 / UV / Urban
+53,27/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,9.433,15.833,25.2,9.367,15.834,28 / white / Urban
+54,27/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,11.733,12.3,24.5,12.2,12.767,32 / UV / Urban
+54,27/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,10.867,32.633,41.667,9.034,30.766,32 / white / Urban
+54,27/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,7.8,8.167,9.433,1.266,1.633,28 / UV / Urban
+54,27/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,15.067,17.533,19.8,2.267,4.766,28 / white / Urban
+55,27/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,3,7.067,7.433,10.033,2.6,3.033,32 / UV / Urban
+55,27/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,4,9.233,9.6,30.767,21.167,21.6,32 / white / Urban
+55,27/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,2,7.9,9.267,12.7,3.433,4.833,28 / UV / Urban
+55,27/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,1,16.733,19.133,21.767,2.634,5.034,28 / white / Urban
+58,27/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,5.733,6.8,11.8,5,6.134,32 / UV / Urban
+58,27/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,6.767,7.867,11.8,3.933,5,32 / white / Urban
+58,27/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,7.433,8.667,10.533,1.866,3.134,28 / UV / Urban
+58,27/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,6.833,8.033,10.1,2.067,3.3,28 / white / Urban
+59,27/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,5.067,12.7,20.967,8.267,15.933,32 / UV / Urban
+59,27/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,15.7,16.633,19.633,3,3.967,32 / white / Urban
+59,27/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,6.067,20.233,33.367,13.134,27.3,28 / UV / Urban
+59,27/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,11.4,12.5,14.9,2.4,3.467,28 / white / Urban
+60,27/05/2024,Honeybees,Apis mellifera,Urban,32,UV,32 / UV,4,11.033,14.967,18.633,3.666,7.6,32 / UV / Urban
+60,27/05/2024,Honeybees,Apis mellifera,Urban,32,white,32 / white,3,15.3,20.767,29.233,8.466,13.967,32 / white / Urban
+60,27/05/2024,Honeybees,Apis mellifera,Urban,28,UV,28 / UV,1,19.7,21.4,31.167,9.767,11.4,28 / UV / Urban
+60,27/05/2024,Honeybees,Apis mellifera,Urban,28,white,28 / white,2,6.267,7.5,15.233,7.733,8.966,28 / white / Urban
+61,27/05/2024,Native,Native,Urban,32,UV,32 / UV,3,6.233,72.733,96.267,23.534,89.967,32 / UV / Urban
+61,27/05/2024,Native,Native,Urban,32,white,32 / white,4,6.133,,,,120,32 / white / Urban
+61,27/05/2024,Native,Native,Urban,28,UV,28 / UV,2,5.6,5.933,64.733,58.8,59.133,28 / UV / Urban
+61,27/05/2024,Native,Native,Urban,28,white,28 / white,1,25.8,29.567,39.7,10.133,13.867,28 / white / Urban
+62,28/05/2024,Native,Lasioglossum,Urban,32,UV,32 / UV,4,23.2,27.933,32.433,4.5,9.2,32 / UV / Urban
+62,28/05/2024,Native,Lasioglossum,Urban,32,white,32 / white,3,10.667,16.067,27.567,11.5,16.866,32 / white / Urban
+62,28/05/2024,Native,Lasioglossum,Urban,28,UV,28 / UV,2,25.733,41.767,,,120,28 / UV / Urban
+62,28/05/2024,Native,Lasioglossum,Urban,28,white,28 / white,1,26.833,44.433,,,120,28 / white / Urban
+64,28/05/2024,Native,Native,Urban,32,UV,32 / UV,3,6.433,18.367,29.333,10.966,22.9,32 / UV / Urban
+64,28/05/2024,Native,Native,Urban,32,white,32 / white,4,11.733,21.8,27,5.2,15.3,32 / white / Urban
+64,28/05/2024,Native,Native,Urban,28,UV,28 / UV,1,36.733,58.767,66.633,7.866,29.9,28 / UV / Urban
+64,28/05/2024,Native,Native,Urban,28,white,28 / white,2,42.433,54.733,65.3,10.567,22.934,28 / white / Urban
+65,28/05/2024,Native,Lasioglossum,Urban,32,UV,32 / UV,3,20,24.5,26.9,2.4,6.933,32 / UV / Urban
+65,28/05/2024,Native,Lasioglossum,Urban,32,white,32 / white,4,19.567,31.767,37.9,6.133,18.366,32 / white / Urban
+65,28/05/2024,Native,Lasioglossum,Urban,28,UV,28 / UV,1,61.567,82.567,90.933,8.366,29.333,28 / UV / Urban
+65,28/05/2024,Native,Lasioglossum,Urban,28,white,28 / white,2,15.867,28,67.367,39.367,51.566,28 / white / Urban
+66,28/05/2024,Native,Native,Urban,32,UV,32 / UV,3,15.1,21.767,50.8,29.033,35.667,32 / UV / Urban
+66,28/05/2024,Native,Native,Urban,32,white,32 / white,4,40.167,,,,120,32 / white / Urban
+66,28/05/2024,Native,Native,Urban,28,UV,28 / UV,2,20.9,,,,120,28 / UV / Urban
+66,28/05/2024,Native,Native,Urban,28,white,28 / white,1,27.167,30.933,48.1,17.167,20.9,28 / white / Urban
+67,28/05/2024,Native,Native,Urban,32,UV,32 / UV,3,7.567,10.8,14.733,3.933,7.166,32 / UV / Urban
+67,28/05/2024,Native,Native,Urban,32,white,32 / white,4,9.033,10.667,17.967,7.3,8.867,32 / white / Urban
+67,28/05/2024,Native,Native,Urban,28,UV,28 / UV,2,20.667,26.6,37.967,11.367,17.333,28 / UV / Urban
+67,28/05/2024,Native,Native,Urban,28,white,28 / white,1,19.067,19.2,30.467,11.267,11.4,28 / white / Urban
+68,28/05/2024,Native,Lasioglossum (Homalictus),Urban,32,UV,32 / UV,4,27.467,42.233,53.433,11.2,25.966,32 / UV / Urban
+68,28/05/2024,Native,Lasioglossum (Homalictus),Urban,32,white,32 / white,3,21.433,23.8,27.633,3.833,6.2,32 / white / Urban
+68,28/05/2024,Native,Lasioglossum (Homalictus),Urban,28,UV,28 / UV,2,46.867,56.233,86.833,30.6,39.966,28 / UV / Urban
+68,28/05/2024,Native,Lasioglossum (Homalictus),Urban,28,white,28 / white,1,70.767,77.233,88.333,11.1,17.566,28 / white / Urban
+70,19/08/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,3,4.733,7.1,9.7,2.6,4.967,32 / UV / Natural
+70,19/08/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,4.967,5.867,11.133,5.266,6.166,32 / white / Natural
+70,19/08/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,2,7.167,9.567,11.867,2.3,4.7,28 / UV / Natural
+70,19/08/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,6.567,9.433,11.633,2.2,5.066,28 / white / Natural
+71,19/08/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,3,5.733,6.2,8.733,2.533,3,32 / UV / Natural
+71,19/08/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,5.133,5.9,9.967,4.067,4.834,32 / white / Natural
+71,19/08/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,2,4.533,6.5,9.467,2.967,4.934,28 / UV / Natural
+71,19/08/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,4.8,7.033,9.1,2.067,4.3,28 / white / Natural
+72,19/08/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,3,6.133,11.033,109.3,98.267,103.134,32 / UV / Natural
+72,19/08/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,6.733,11.4,34.6,23.2,27.867,32 / white / Natural
+72,19/08/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,2,24.4,24.733,25.733,1,1.333,28 / UV / Natural
+72,19/08/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,26.2,36.667,41.867,5.2,15.667,28 / white / Natural
+73,19/08/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,3,5.2,18.5,42.367,23.867,37.167,32 / UV / Natural
+73,19/08/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,3.533,36.567,54.244,17.677,50.711,32 / white / Natural
+73,19/08/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,2,6.4,6.433,8.033,1.6,1.633,28 / UV / Natural
+73,19/08/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,5.9,7.133,8.967,1.834,3.067,28 / white / Natural
+74,19/08/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,3,6.733,7.733,9.8,2.067,3.067,32 / UV / Natural
+74,19/08/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,6.6,8.8,12.033,3.233,5.433,32 / white / Natural
+74,19/08/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,2,4.9,5.533,7.833,2.3,2.9,28 / UV / Natural
+74,19/08/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,5.2,5.6,7.667,2.067,2.467,28 / white / Natural
+75,19/08/2024,Native,Native,Natural,32,UV,32 / UV,3,11.333,12.7,14.467,1.767,3.134,32 / UV / Natural
+75,19/08/2024,Native,Native,Natural,32,white,32 / white,4,13.6,23.1,50.133,27.033,36.533,32 / white / Natural
+75,19/08/2024,Native,Native,Natural,28,UV,28 / UV,2,5.667,11.867,14.4,2.533,8.733,28 / UV / Natural
+75,19/08/2024,Native,Native,Natural,28,white,28 / white,1,5.033,13.933,24.567,10.634,19.534,28 / white / Natural
+77,3/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,2,11.2,11.467,39.3,27.833,28.1,32 / UV / Natural
+77,3/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,1,25.2,88.74,146.52,57.78,119.32,32 / white / Natural
+77,3/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,3,16.767,21.867,28.4,6.533,11.633,28 / UV / Natural
+77,3/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,4,10.5,20.3,30.1,9.8,19.6,28 / white / Natural
+78,3/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,2,8.067,23.333,46.033,22.7,37.966,32 / UV / Natural
+78,3/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,4.867,11.867,24.167,12.3,19.3,32 / white / Natural
+78,3/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,1,6.233,11.267,21,9.733,14.767,28 / UV / Natural
+78,3/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,3,4.267,27.167,37.8,10.633,33.533,28 / white / Natural
+79,3/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,2,4.267,5.733,46.233,40.5,41.966,32 / UV / Natural
+79,3/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,1,7.233,8.367,51,42.633,43.767,32 / white / Natural
+79,3/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,3,6.367,7.2,9.367,2.167,3,28 / UV / Natural
+79,3/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,4,8.1,10.467,32.667,22.2,24.567,28 / white / Natural
+80,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,1,3.967,6.367,11.767,5.4,7.8,32 / UV / Natural
+80,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,2,8.167,10.567,15.167,4.6,7,32 / white / Natural
+80,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,3,5.733,7.4,9.433,2.033,3.7,28 / UV / Natural
+80,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,4,4.5,5.267,7.533,2.266,3.033,28 / white / Natural
+81,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,1,3.833,5.367,10.4,5.033,6.567,32 / UV / Natural
+81,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,2,3.933,8.367,12.6,4.233,8.667,32 / white / Natural
+81,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,4,1.933,4.733,7.367,2.634,5.434,28 / UV / Natural
+81,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,3,5.9,6.667,8.633,1.966,2.733,28 / white / Natural
+82,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,3,4.5,8.2,19.3,11.1,14.8,32 / UV / Natural
+82,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,4,7.567,7.733,9.667,1.934,2.1,32 / white / Natural
+82,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,1,4.233,52.6,55.7,3.1,51.467,28 / UV / Natural
+82,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,2,4.267,15.767,24.2,8.433,19.933,28 / white / Natural
+83,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,4,4.267,4.3,22.633,18.333,18.366,32 / UV / Natural
+83,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,2,5.433,24.8,62.933,38.133,57.5,32 / white / Natural
+83,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,1,10.267,25.933,29.533,3.6,19.266,28 / UV / Natural
+83,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,3,5.133,29.567,38.433,8.866,33.3,28 / white / Natural
+84,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,4,4.533,5.933,10.333,4.4,5.8,32 / UV / Natural
+84,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,2,3.533,18.033,57.767,39.734,54.2,32 / white / Natural
+84,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,3,5.2,7.733,17.667,9.934,12.467,28 / UV / Natural
+84,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,4.433,21.933,88.4,66.467,83.967,28 / white / Natural
+85,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,2,4.133,5.733,17.9,12.167,13.767,32 / UV / Natural
+85,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,1,4.3,6.133,19.2,13.067,14.9,32 / white / Natural
+85,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,4,4.067,6.667,17.733,11.066,13.666,28 / UV / Natural
+85,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,3,3.533,6.467,14.467,8,10.934,28 / white / Natural
+86,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,4,3.167,4.5,7.9,3.4,4.733,32 / UV / Natural
+86,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,3,3.733,6.967,12.767,5.8,9.067,32 / white / Natural
+86,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,2,3.867,30.233,37.533,7.3,33.666,28 / UV / Natural
+86,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,4.2,10.567,13.267,2.7,9.067,28 / white / Natural
+87,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,1,7.133,12.033,16.067,4.034,8.934,32 / UV / Natural
+87,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,3,5.133,7.067,10.533,3.466,5.4,32 / white / Natural
+87,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,4,4.5,8.033,9.367,1.334,4.867,28 / UV / Natural
+87,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,2,5.833,33.567,44.933,11.366,39.1,28 / white / Natural
+89,18/09/2024,Honeybees,Apis mellifera,Natural,32,UV,32 / UV,4,6.467,8.2,11.8,3.6,5.333,32 / UV / Natural
+89,18/09/2024,Honeybees,Apis mellifera,Natural,32,white,32 / white,2,11.1,17.233,31.033,13.8,19.933,32 / white / Natural
+89,18/09/2024,Honeybees,Apis mellifera,Natural,28,UV,28 / UV,3,4.567,28.233,64.767,36.534,60.2,28 / UV / Natural
+89,18/09/2024,Honeybees,Apis mellifera,Natural,28,white,28 / white,1,4.733,10.333,15.133,4.8,10.4,28 / white / Natural
