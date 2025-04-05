@@ -33,7 +33,6 @@ install.packages("BFpack") # Bayes Factor for logistic regression
 install.packages("ggThemeAssist") # Add-in to customize ggplot2 themes
 install.packages("performance") # For assumption checking
 install.packages("DHARMa") # For assumption checking
-install.packages("MuMIn")
 install.packages("patchwork")
 install.packages("lmerTest")
 ```
@@ -49,18 +48,15 @@ library(BFpack) # Bayes Factor for logistic regression
 library(ggThemeAssist) # you may need to restart you session for this add-in to appear
 library(performance) # For assumption checking
 library(DHARMa) # For assumption checking
-library(MuMIn)
 library(tidyr)
 library(patchwork)
 library(lmerTest)
 library(readr)
-
-options(contrasts = c("contr.sum", "contr.poly"))
 ```
 
 #**Load Data**
 ```{r}
-beesNA <- read.csv("../Data/bees_wNA.csv", header = TRUE, na.strings = "NA")
+beesNA <- read.csv("../Data/bees_wNA.csv", header = TRUE)
 view(beesNA)
 summary(beesNA) #view summary
 str(beesNA) #display structure
@@ -99,39 +95,23 @@ ggplot(data = beesNA, aes(x = condition, y = duration_from_start, colour = type)
 #**Modelling**
 ```{r}
 
-beesNA_m1 <- lmer(duration_from_start~ urban_gradient*temperature*light + condition_sequence + type +  (1|individual), data = beesNA)
-
-```
-
-#**Dredge**
-```{r}
-
-options(na.action = na.fail)
-glmdredge <- dredge(beesNA_m1)
-glmdredge
-
-```
-
-#**Remodeling**
-```{r}
-
-beesNA_m2 <- lmer(duration_from_start~ light + temperature + urban_gradient + type + light*urban_gradient + light*temperature +  (1|individual), data = beesNA)
-
-summary(beesNA_m2)
+beesNA_m1 <- lmer(duration_from_start~ urban_gradient*temperature*light + type*temperature + type*light + type +   (1|individual), data = beesNA)
+summary(beesNA_m1)
+AIC(beesNA_m1)
 
 ```
 
 #**Check Assumptions**
 ```{r}
-acf(residuals(beesNA_m2)) # check for independence of residuals - there should be no increasing or decreasing pattern and should look noisy
+acf(residuals(beesNA_m1)) # check for independence of residuals - there should be no increasing or decreasing pattern and should look noisy
 
-qqnorm(residuals(beesNA_m2))
-qqline(residuals(beesNA_m2))  # Normality of residuals
+qqnorm(residuals(beesNA_m1))
+qqline(residuals(beesNA_m1))  # Normality of residuals
 
 
-plot(fitted(beesNA_m2), residuals(beesNA_m2))   # Homoscedasticity assumption, there should be no fanning pattern
+plot(fitted(beesNA_m1), residuals(beesNA_m1))   # Homoscedasticity assumption, there should be no fanning pattern
 
-simulated_residuals <- simulateResiduals(fittedModel = beesNA_m2) # additional test from DHARMA
+simulated_residuals <- simulateResiduals(fittedModel = beesNA_m1) # additional test from DHARMA
 plot(simulated_residuals)
 ```
 
@@ -139,22 +119,28 @@ plot(simulated_residuals)
 ```{r}
 beesNA$transformed_duration <- log(beesNA$duration_from_start)
 
-beesNA_m2 <- lmer(transformed_duration~ light + temperature + urban_gradient + type + light*urban_gradient + light*temperature + temperature*urban_gradient + (1|individual), data = beesNA)
+# Full model
+beesNA_m3 <- lmer(transformed_duration~ urban_gradient*temperature*light + type*temperature + type*light + (1|individual), data = beesNA)
+AIC(beesNA_m3)
+summary(beesNA_m3)
 
-summary(beesNA_m2)
+# Simplify further
+beesNA_m4 <- lmer(transformed_duration~ light + urban_gradient*temperature + type*temperature + (1|individual), data = beesNA)
+AIC(beesNA_m4)
+summary(beesNA_m4)
 ```
 
 #**Check Assumptions**
 ```{r}
-acf(residuals(beesNA_m2)) # check for independence of residuals - there should be no increasing or decreasing pattern and should look noisy
+acf(residuals(beesNA_m4)) # check for independence of residuals - there should be no increasing or decreasing pattern and should look noisy
 
-qqnorm(residuals(beesNA_m2))
-qqline(residuals(beesNA_m2))  # Normality of residuals
+qqnorm(residuals(beesNA_m4))
+qqline(residuals(beesNA_m4))  # Normality of residuals
 
 
-plot(fitted(beesNA_m2), residuals(beesNA_m2))   # Homoscedasticity assumption, there should be no fanning pattern
+plot(fitted(beesNA_m4), residuals(beesNA_m4))   # Homoscedasticity assumption, there should be no fanning pattern
 
-simulated_residuals <- simulateResiduals(fittedModel = beesNA_m2) # additional test from DHARMA
+simulated_residuals <- simulateResiduals(fittedModel = beesNA_m4) # additional test from DHARMA
 plot(simulated_residuals)
 ```
 
@@ -206,6 +192,17 @@ ggsave(fig3, width = 8, height = 6, dpi = 300, filename = "../Output/fig3.pdf")
 ggsave(fig3, width = 8, height = 6, dpi = 300, filename = "../Output/fig3.png")
 
 ```
+#** Interaction effect graph**
+```{r}
+ggplot(beesNA, aes(x = temperature, y = transformed_duration, color = type, group = type)) +
+  geom_smooth(method = "lm", se = TRUE, aes(color = type)) +  # Add regression lines with confidence intervals
+  labs(title = "Interaction between Temperature and Bee Type",
+       x = "Temperature (32 vs. 28)",
+       y = "Response Variable",
+       color = "Bee Type") +
+  theme_minimal()
+```
+
 
 #**Means**
 ```{r}
