@@ -74,6 +74,15 @@ beesNA$condition <- as.factor(beesNA$condition)
 beesNA$condition2 <- as.factor(beesNA$condition2)
 beesNA$condition_sequence <- as.factor(beesNA$condition_sequence)
 str(beesNA)
+summary(beesNA)
+
+honeybees_df <- beesNA %>%
+  filter(type == "Honeybees")
+summary(honeybees_df)
+
+native_df <- beesNA %>%
+  filter(type == "Native")
+summary(native_df)
 ```
 # **Check Levels**
 ```{r message=FALSE, warning=FALSE, results=FALSE}
