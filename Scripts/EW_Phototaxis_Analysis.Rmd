@@ -36,6 +36,7 @@ install.packages("performance") # For assumption checking
 install.packages("DHARMa") # For assumption checking
 install.packages("patchwork")
 install.packages("lmerTest")
+install.packages("emmeans")
 ```
 
 # **Load Packages**
@@ -53,6 +54,7 @@ library(tidyr)
 library(patchwork)
 library(lmerTest)
 library(readr)
+library(emmeans)
 ```
 
 # **Load Data**
@@ -138,6 +140,22 @@ summary(beesNA_m3)
 beesNA_m4 <- lmer(transformed_duration~ light + urban_gradient*temperature + type*temperature + (1|individual), data = beesNA)
 AIC(beesNA_m4)
 summary(beesNA_m4)
+
+# Posthoc analysis
+
+emm_all <- emmeans(beesNA_m4, ~ type * temperature * urban_gradient * light,
+                   at = list(
+                     type = levels(beesNA$type),
+                     temperature = levels(beesNA$temperature),
+                     urban_gradient = levels(beesNA$urban_gradient),
+                     light = levels(beesNA$light)
+                   ))
+emm_interaction <- emmeans(beesNA_m4, ~ type * temperature)
+
+
+pairs(emm_interaction, by = "type")
+emm_df <- as.data.frame(emm_interaction)
+
 ```
 
 # **Check Assumptions**
@@ -157,70 +175,107 @@ plot(simulated_residuals)
 # **Visualise by Group**
 ```{r message=FALSE, warning=FALSE}
 
-summary_bees <- beesNA %>%
-  group_by(condition2, type) %>%
-  mutate(
-    mean = mean(transformed_duration),
-    individual = as.factor(individual),
-    n = n(),
-    se = sd(transformed_duration) / sqrt(n),
-    ci95 = qt(0.975, df = n - 1) * se,   # 95% CI multiplier
-    ci_low = mean - ci95,
-    ci_high = mean + ci95
-  ) %>%
-  ungroup()
+model_bees <- as.data.frame(emm_all)
+model_bees$emmean_raw <- exp(model_bees$emmean)     
+model_bees$lower.CL_raw <- exp(model_bees$lower.CL)
+model_bees$upper.CL_raw <- exp(model_bees$upper.CL)
 
-summary_bees <- summary_bees %>%
-  mutate(transformed_duration = ifelse(transformed_duration < 0, 0.01, transformed_duration))
+model_bees <- model_bees %>%
+  mutate(condition2 = paste(temperature, light, urban_gradient, sep = " / "))
 
-fig3 <- ggplot(summary_bees, aes(x = condition2, y = transformed_duration)) +
-  geom_col(aes(y = mean, fill = type), size = 4, position = position_dodge(0.9)) +
+model_bees <- model_bees %>%
+  left_join(
+    beesNA %>%
+      group_by(type, temperature) %>%
+      summarise(raw_mean = mean(duration_from_start, na.rm = TRUE)),
+    by = c("type", "temperature")
+  )
+
+
+types <- unique(model_bees$type)
+
+
+top <- ggplot() +
+  geom_col(
+    data = model_bees %>% filter(type == types[1]),
+    aes(x = condition2, y = emmean_raw, fill = type),
+    position = position_dodge(0.9), width = 0.9
+  ) +
   geom_jitter(
-  aes(fill = type, group = type),  # fill/type gives dodging reference
-  position = position_jitterdodge(jitter.width = 0.01, dodge.width = 0.9),
-  show.legend = FALSE,
-  size = 0.7,
-  colour = "grey50"  # fixed display colour
-) +
+    data = beesNA %>% filter(type == types[1]),
+    aes(x = condition2, y = duration_from_start),
+    position = position_jitter(width = 0.1),
+    size = 0.7, colour = "grey50", show.legend = FALSE
+  ) +
   geom_errorbar(
-    aes(ymin = ci_low, ymax = ci_high, group = type),
+    data = model_bees %>% filter(type == types[1]),
+    aes(x = condition2, ymin = lower.CL_raw, ymax = upper.CL_raw),
     position = position_dodge(0.9), width = 0.15, colour = "black"
   ) +
-  scale_colour_manual(values = wes_palette("Darjeeling1", length(unique(summary_bees$individual)), type = "continuous")) +
-  scale_fill_manual(values = c(
-    "Honeybees" = "#D9A94D",
-    "Native" = "#A1B5D8"
-  )) +
-  labs(
-    x = "Condition (ºC / Light / Urban Gradient)",
-    y = "Mean log duration (in seconds from start)",
-    fill = "Species"
+  scale_fill_manual(values = c("Honeybees" = "#D9A94D", "Native" = "#A1B5D8")) +
+  labs(y = "Duration (seconds)") +
+  scale_y_continuous(
+    sec.axis = dup_axis(name = types[1])   # Right-hand taxa label
   ) +
-  theme(legend.position = "right") +
-  theme_minimal(base_family = "") +
-  guides(fill = guide_legend(title = "Taxa")) +
+  theme_minimal() +
   theme(
-    plot.background = element_rect(fill = "white"),
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.x = element_blank(),
+    axis.text.y.right = element_blank(),   # hide right ticks
+    axis.ticks.y.right = element_blank(),
+    panel.grid = element_blank(),
     axis.line = element_line(color = "black"),
-    axis.text = element_text(size = 12),
-    axis.title = element_text(size = 12),
-    legend.text = element_text(size = 12),
-    legend.title = element_text(size = 12),
-    plot.margin = margin(0.8, 0.8, 0.8, 0.8, "cm"),
-    axis.title.x = element_text(vjust = -4),
-    axis.title.y = element_text(vjust = 6),
-    axis.text.x = element_text(angle = 45, hjust = 1)
+    legend.position = "none"
+  )
+
+bottom <- ggplot() +
+  geom_col(
+    data = model_bees %>% filter(type == types[2]),
+    aes(x = condition2, y = emmean_raw, fill = type),
+    position = position_dodge(0.9), width = 0.9
   ) +
-  scale_y_continuous(expand = c(0, 0), limits = c(0, 5))
+  geom_jitter(
+    data = beesNA %>% filter(type == types[2]),
+    aes(x = condition2, y = duration_from_start),
+    position = position_jitter(width = 0.1),
+    size = 0.7, colour = "grey50", show.legend = FALSE
+  ) +
+  geom_errorbar(
+    data = model_bees %>% filter(type == types[2]),
+    aes(x = condition2, ymin = lower.CL_raw, ymax = upper.CL_raw),
+    position = position_dodge(0.9), width = 0.15, colour = "black"
+  ) +
+  scale_fill_manual(values = c("Honeybees" = "#D9A94D", "Native" = "#A1B5D8")) +
+  labs(x = "Condition", y = "Duration (seconds)") +
+  scale_y_continuous(
+    sec.axis = dup_axis(name = types[2])   # Right-hand taxa label
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.text.y.right = element_blank(),   
+    axis.ticks.y.right = element_blank(),
+    panel.grid = element_blank(),
+    axis.title.x = element_text(margin = margin(t = 15)),
+    axis.line = element_line(color = "black"),
+    legend.position = "none"
+  )
+
+fig3 <- top / bottom +
+  plot_annotation(tag_levels = "A") &
+  theme(
+    plot.tag = element_text(size = 14, face = "bold"),
+    plot.tag.position = c(0.02, 0.95)
+  )
+
 print(fig3)
 
-
-ggsave(fig3, width = 8, height = 6, dpi = 300, filename = "../Output/fig3.pdf")
-ggsave(fig3, width = 8, height = 6, dpi = 300, filename = "../Output/fig3.png")
+ggsave(fig3, width = 5, height = 9, dpi = 300, filename = "../Output/fig3.png")
+ggsave(fig3, width = 5, height = 9, dpi = 300, filename = "../Output/fig3.pdf")
 
 ```
+
 # ** Interaction effect graph**
 ```{r message=FALSE, warning=FALSE}
 ggplot(beesNA, aes(x = temperature, y = transformed_duration, color = type, group = type)) +
@@ -240,6 +295,11 @@ mean_duration <- beesNA %>%
   group_by(type, temperature) %>%
   summarise(mean = mean(duration_from_start, na.rm = TRUE))
 print(mean_duration)
+
+mean_logduration <- beesNA %>%
+  group_by(type, temperature) %>%
+  summarise(mean = mean(transformed_duration, na.rm = TRUE))
+print(mean_logduration)
 ```
 
 
